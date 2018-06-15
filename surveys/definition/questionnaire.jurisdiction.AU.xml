@@ -22,14 +22,14 @@
 			<label>Rights</label>
 			<help>your right to share this data with people</help>
 			<question id="publisherRights">
-				<label>Do you have the right to make this data open?</label>
+				<label>Do you have the rights to publish this data as open data?</label>
 				<radioset required="required">
 					<option value="yes">
-						<label>yes, you have the rights to open this data up</label>
+						<label>yes, you have the rights to publish this data as open data</label>
 						<requirement level="standard">You should have a <strong>clear legal right to publish this data</strong>.</requirement>
 					</option>
 					<option value="no">
-						<label>no, you don’t have the rights to open up this data</label>
+						<label>no,  you don't have the rights to publish this data as open data</label>
 					</option>
 					<option value="unsure">
 						<label>you’re not sure if you have the rights to publish this data as open data</label>
