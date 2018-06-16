@@ -143,6 +143,7 @@
 				<help>Give the URL to a page that describes the right to re-use this dataset. This should include a reference to its license, attribution requirements, and a statement about relevant copyright and database rights. A rights statement helps people understand what they can and can't do with the data.</help>
 				<requirement level="pilot">You should <strong>publish a rights statement</strong> that details copyright, database rights, licensing and how people should give attribution to the data.</requirement>
 			</question>
+<!--			
 			<question id="dataLicence" display="This data is available under">
 				<label>Under which licence can people reuse this data?</label>
 				<select required="required">
@@ -215,6 +216,7 @@
 					<requirement>You must <strong>publish open data under an open licence</strong> so that people can use it.</requirement>
 				</question>
 			</if>
+-->			
 			<question id="contentRights" display="There are">
 				<label>Is there any copyright in the content of this data?</label>
 				<radioset required="required">
@@ -248,7 +250,9 @@
 						<option value="cc-by">Creative Commons Attribution</option>
 						<option value="cc-by-sa">Creative Commons Attribution Share-Alike</option>
 						<option value="cc-zero">Creative Commons CCZero</option>
+<!--						
 						<option value="ogl-uk">UK Open Government Licence</option>
+-->						
 						<option value="na" display="">Not applicable</option>
 						<option value="other" display="">Other...</option>
 					</select>
