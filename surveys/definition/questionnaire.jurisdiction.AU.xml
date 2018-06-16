@@ -4,7 +4,7 @@
 	https://creativecommons.org/licenses/by-sa/2.0/uk/deed.en_GB
   -->
 <?xml-stylesheet type="text/xsl" href="../surveyor.xsl"?>
-<questionnaire version="0.94" status="beta" jurisdiction="AU" xml:lang="en">
+<questionnaire version="0.94" status="final" jurisdiction="AU" xml:lang="en">
 	<locales>
 		<!-- if other languages are required
 		<locale>fr</locale>
