@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><!--
 	© 2013 Open Data Institute
 	This work is licensed under a Creative Commons Attribution-ShareAlike 2.0 UK: England & Wales License.
-	http://creativecommons.org/licenses/by-sa/2.0/uk/deed.en_GB
+	https://creativecommons.org/licenses/by-sa/2.0/uk/deed.en_GB
   -->
 <?xml-stylesheet type="text/xsl" href="../surveyor.xsl"?>
 <questionnaire version="0.94" status="alpha" jurisdiction="AU" xml:lang="en">
@@ -40,7 +40,7 @@
 				</radioset>
 				<help>If your organisation did not originally create or gather this data then you may not have the right to publish it as open data. If you are not sure, please check with the data owner for their permission.
 				<br/>
-				Open data is data that anyone can access, use and share – subject only, at most, to the requirement to attribute and share-alike – see our page explaining ‘<a href="https://theodi.org/what-is-open-data">what is open data?</a>’ and the <a href="http://opendefinition.org">open definition</a> for more details.</help>
+				Open data is data that anyone can access, use and share – subject only, at most, to the requirement to attribute and share-alike – see our page explaining ‘<a href="https://theodi.org/what-is-open-data">what is open data?</a>’ and the <a href="https://opendefinition.org">open definition</a> for more details.</help>
 				<if test="this.publisherRights() === 'no'">
 					<requirement>You must have the <strong>right to publish this data</strong>.</requirement>
 				</if>
@@ -105,7 +105,7 @@
 							<question id="claUrl" display="The Contributor Licence Agreement is at">
 								<label>Where is the Contributor Licence Agreement (CLA)?</label>
 								<input type="url" placeholder="Contributor Licence Agreement URL" required="required"/>
-								<help more="http://en.wikipedia.org/wiki/Contributor_License_Agreement">Give a link to an agreement that shows contributors allow you to reuse their data. A CLA will either transfer contributor's rights to you, waive their rights, or license the data to you so you can publish it.</help>
+								<help more="https://en.wikipedia.org/wiki/Contributor_License_Agreement">Give a link to an agreement that shows contributors allow you to reuse their data. A CLA will either transfer contributor's rights to you, waive their rights, or license the data to you so you can publish it.</help>
 							</question>
 							<question id="cldsRecorded">
 								<label>Have all contributors agreed to the Contributor Licence Agreement (CLA)?</label>
@@ -211,7 +211,7 @@
 				<question id="otherDataLicenceOpen">
 					<label>Is the licence an open licence?</label>
 					<yesno required="required"/>
-					<help more="http://opendefinition.org/">If you aren't sure what an open licence is then read the <a href="http://opendefinition.org/">Open Knowledge Definition</a> definition. Next, choose your licence from the <a href="http://licenses.opendefinition.org/">Open Definition Advisory Board open licence list</a>. If a licence isn't in their list, it's either not open or hasn't been assessed yet.</help>
+					<help more="https://opendefinition.org/">If you aren't sure what an open licence is then read the <a href="https://opendefinition.org/">Open Knowledge Definition</a> definition. Next, choose your licence from the <a href="https://licenses.opendefinition.org/">Open Definition Advisory Board open licence list</a>. If a licence isn't in their list, it's either not open or hasn't been assessed yet.</help>
 					<requirement>You must <strong>publish open data under an open licence</strong> so that people can use it.</requirement>
 				</question>
 			</if>
@@ -236,7 +236,7 @@
 				<question id="explicitWaiver" display="The content has been">
 					<label>Is the content of the data marked as public domain?</label>
 					<yesno yes="marked as public domain" />
-					<help>Works in the public domain are those whose intellectual property rights have expired, have been forfeited, or are inapplicable. If none of the content of your data have copyright or other rights over it, it is good practice to explicitly state this by labelling it as ‘public domain’. You can do this by using the <a href="http://creativecommons.org/publicdomain/">Creative Commons Public Domain Mark</a>.</help>
+					<help>Works in the public domain are those whose intellectual property rights have expired, have been forfeited, or are inapplicable. If none of the content of your data have copyright or other rights over it, it is good practice to explicitly state this by labelling it as ‘public domain’. You can do this by using the <a href="https://creativecommons.org/publicdomain/">Creative Commons Public Domain Mark</a>.</help>
 					<requirement level="standard">You should <strong>mark public domain content as public domain</strong> so that people know they can reuse it.</requirement>
 				</question>
 			</if>
@@ -305,7 +305,7 @@
 					<question id="otherContentLicenceOpen">
 						<label>Is the licence an open licence?</label>
 						<yesno required="required"/>
-						<help more="http://opendefinition.org/">If you aren't sure what an open licence is then read the <a href="http://opendefinition.org/">Open Knowledge Definition</a> definition. Next, choose your licence from the <a href="http://licenses.opendefinition.org/">Open Definition Advisory Board open licence list</a>. If a licence isn't in their list, it's either not open or hasn't been assessed yet.</help>
+						<help more="https://opendefinition.org/">If you aren't sure what an open licence is then read the <a href="https://opendefinition.org/">Open Knowledge Definition</a> definition. Next, choose your licence from the <a href="https://licenses.opendefinition.org/">Open Definition Advisory Board open licence list</a>. If a licence isn't in their list, it's either not open or hasn't been assessed yet.</help>
 						<requirement>You must <strong>publish open data under an open licence</strong> so that people can use it.</requirement>
 					</question>
 				</if>
@@ -375,7 +375,7 @@
 					</option>
 					<option value="summarised" display="aggregated data">
 						<label>no, the data has been anonymised by aggregating individuals into groups, so they can't be distinguished from other people in the group</label>
-						<help more="http://www.ons.gov.uk/ons/guide-method/best-practice/disclosure-control-policy-for-tables/index.html">Statistical disclosure controls can help to make sure that individuals are not identifiable within aggregate data.</help>
+						<help>Statistical disclosure controls can help to make sure that individuals are not identifiable within aggregate data.</help>
 					</option>
 					<option value="individual" display="information that could identify individuals">
 						<label>yes, there is a risk that individuals be identified, for example by third parties with access to extra information</label>
@@ -415,14 +415,14 @@
 					<question id="privacyImpactAssessmentExists" display="The curator has">
 						<label>Have you carried out a Privacy Impact Assessment?</label>
 						<yesno yes="carried out a Privacy Impact Assessment" no="not carried out a Privacy Impact Assessment" />
-						<help more="http://www.ico.gov.uk/for_organisations/data_protection/topic_guides/privacy_impact_assessment.aspx">A <a href="http://www.ico.gov.uk/for_organisations/data_protection/topic_guides/privacy_impact_assessment.aspx">Privacy Impact Assessment</a> is how you measure risks to the privacy of individuals in your data as well as the use and disclosure of that information.</help>
+						<help>A <a href="http://www.ico.gov.uk/for_organisations/data_protection/topic_guides/privacy_impact_assessment.aspx">Privacy Impact Assessment</a> is how you measure risks to the privacy of individuals in your data as well as the use and disclosure of that information.</help>
 						<requirement level="pilot">You should <strong>do a Privacy Impact Assessment</strong> if you publish data about individuals.</requirement>
 					</question>
 					<if test="this.privacyImpactAssessmentExists() === 'true'">
 						<question id="privacyImpactAssessmentUrl" display="The Privacy Impact Assessment is published at">
 							<label>Where is your Privacy Impact Assessment published?</label>
 							<input type="url" placeholder="Privacy Impact Assessment URL"/>
-							<help more="http://www.ico.gov.uk/for_organisations/data_protection/topic_guides/privacy_impact_assessment.aspx">Give a URL to where people can check how you have assessed the privacy risks to individuals. This may be redacted or summarised if it contains sensitive information.</help>
+							<help>Give a URL to where people can check how you have assessed the privacy risks to individuals. This may be redacted or summarised if it contains sensitive information.</help>
 							<requirement level="standard">You should <strong>publish your Privacy Impact Assessment</strong> so people can understand how you have assessed the risks of disclosing data.</requirement>
 						</question>
 						<if test="this.privacyImpactAssessmentUrl() !== ''">
