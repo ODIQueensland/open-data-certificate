@@ -382,7 +382,7 @@
 			</question>
 	<!-- Q2 If the data is about individuals, has it been de-identified? -->
 			<if test="this.dataPersonal() === 'individual'">
-				<question id="dataSummarisedX" display="This data has">
+				<question id="dataSummarised" display="This data has">
 					<label>Has the data is about individuals been de-identified?</label>
 					<radioset required="pilot">
 						<option value="yes" display="been de-identified">
@@ -396,17 +396,17 @@
 					</radioset>
 				</question>
 	<!-- Q3 If the data about individuals has not been de-identified, can you legally publish it?  -->
-				<if test="this.dataSummarisedX() === 'no'">
+				<if test="this.dataSummarised() === 'no'">
 					<question id="lawfulDisclosure" display="By law, this data about individuals">
-						<label>Do you have permission to publish this personal data online?</label>
+						<label>Do you have permission to publish this personal data online? </label>
 						<yesno yes="can be published"/>
 						<help more="https://theodi.org.au/open-data-certificate-help-privacy/#lawfulDisclosure">You may be able to publish data about individuals online if either, the data is required or permitted to be published by law, or you have permission from the affected individuals.</help>
 						<requirement level="pilot">You should <strong>only publish personal data without de-identification if you are required or permitted to do so by law</strong>.</requirement>
 					</question>
 	<!-- Q4 If the data can you legally published, where is the law published?  -->
-					<if test="this.lawfulDisclosureX() === 'true'">
-						<question id="lawfulDisclosureURLX" display="The right to publish this data about individuals is documented at">
-							<label>Where do you document your right to publish data about individuals?</label>
+					<if test="this.lawfulDisclosure() === 'true'">
+						<question id="lawfulDisclosureURL" display="The right to publish this data about individuals is documented at">
+							<label>Where do you document your right to publish data about individuals? </label>
 							<input type="url" placeholder="Disclosure Rationale URL"/>
 							<help more="https://theodi.org.au/open-data-certificate-help-privacy/#lawfulDisclosureURL">Provide a URL to the law or individual permission that allows you to publish this data about individuals.</help>
 							<requirement level="standard">You should <strong>document your right to publish data about individuals</strong> for people who use your data and for those affected by disclosure.</requirement>
@@ -414,31 +414,31 @@
 					</if>
 				</if>
 	<!-- Q5 if the data about individuals has been de-identified, has the process been audited?  -->
-				<if test="this.dataSummarisedX() === 'yes'">
-					<question id="statisticalAnonAuditedX" display="The de-identification process has">
-						<label>Has your de-identification process been independently audited?</label>
+				<if test="this.dataSummarised() === 'yes'">
+					<question id="statisticalAnonAudited" display="The de-identification process has">
+						<label>Has your de-identification process been independently audited? </label>
 						<yesno yes="been independently audited" no="not been independently audited"/>
 						<help more="https://theodi.org.au/open-data-certificate-help-privacy/#dataDeidentifiedAudited">It's good practice to check your de-identification was done correctly. Independent audits by specialists or third-parties tend to be more rigorous and impartial.</help>
 						<requirement level="standard">You should <strong>have your de-identification process audited independently</strong> to ensure it reduces the risk of individuals being reidentified.</requirement>
 					</question>
 	<!-- Q6 if the data about individuals has been de-identified, has the publishing risks been assessed?  -->
-					<question id="privacyImpactAssessmentExistsX" display="The curator has">
-						<label>Have you assessed the privacy risks of publishing this data?</label>
+					<question id="privacyImpactAssessmentExists" display="The curator has">
+						<label>Have you assessed the privacy risks of publishing this data? </label>
 						<yesno yes="assessed the privacy risks of publishing this data" no="not assessed the privacy risks of publishing this data"/>
 						<help more="https://theodi.org.au/open-data-certificate-help-privacy/#riskAssessment">You should assess the likelihood of personal data being disclosed and the consequences to individuals of the disclosure.</help>
 						<requirement level="pilot">You should <strong>assess the privacy risks</strong> if you publish data about individuals.</requirement>
 					</question>
 	<!-- Q7 if the publishing risks have been assessed, is the risk assessment published?  -->
-					<if test="this.privacyImpactAssessmentExistsX() === 'true'">
-						<question id="privacyImpactAssessmentUrlX" display="The privacy risk assessment is published at">
-							<label>Where is your privacy risk assessment published?</label>
+					<if test="this.privacyImpactAssessmentExists() === 'true'">
+						<question id="privacyImpactAssessmentUrl" display="The privacy risk assessment is published at">
+							<label>Where is your privacy risk assessment published? </label>
 							<input type="url" placeholder="Privacy risk assessment URL"/>
 							<help more="https://theodi.org.au/open-data-certificate-help-privacy/#riskAssessmentURL">Provide a URL to where people can check how you have assessed the privacy risks to individuals. This may be redacted or summarised if it contains sensitive information.</help>
 							<requirement level="standard">You should <strong>publish your privacy risk assessment</strong> so people can understand how you have assessed the risks of disclosing data.</requirement>
 						</question>
 	<!-- Q8 if the publishing risks have been assessed, has it been independently audited? -->
-						<question id="piaAuditedX" display="The privacy risk assessment has been">
-							<label>Has your privacy risk assessment been independently audited?</label>
+						<question id="piaAudited" display="The privacy risk assessment has been">
+							<label>Has your privacy risk assessment been independently audited? </label>
 							<yesno yes="independently audited" no="not been independently audited"/>
 							<help more="https://theodi.org.au/open-data-certificate-help-privacy/#riskAssessmentAudited">It's good practice to check your privacy risk assessment was done correctly. Independent audits by specialists or third-parties tend to be more rigorous and impartial.</help>
 							<requirement level="standard">You should <strong>have your privacy risk assessment audited independently</strong> to ensure it has been carried out correctly.</requirement>
