@@ -101,12 +101,12 @@
 						</if>
 					</question>
 					<if test="this.crowdsourced() === 'true'">
-						<question id="crowdsourcedContent">
+						<question id="crowdsourcedContentPoke">
 							<label>Did contributors to this data use their judgement?</label>
 							<yesno required="required"/>
 							<help>If people used their creativity or judgement to contribute data then they have copyright over their work. For example, writing a description or deciding whether or not to include some data in a dataset would require judgement. So contributors must transfer or waive their rights, or license the data to you before you can publish it.</help>
 						</question>
-						<if test="this.crowdsourcedContent() === 'true'">
+						<if test="this.crowdsourcedContentPoke() === 'true'">
 							<question id="claUrl" display="The contributor licence or waiver is at">
 								<!-- label is not display as shown below in the app. Tolerable -->
 								<label>Where is the contributor licence or waiver?</label>
@@ -173,7 +173,7 @@
 				</radioset>
 			</question>
 			<if test="this.contentRights() === 'norights'">
-				<question id="explicitWaiver" display="The content has been">
+				<question id="explicitWaiverPoke" display="The content has been">
 					<label>Is the content of the data marked as public domain?</label>
 					<yesno yes="marked as public domain" />
 					<!-- help is not display as shown below in the app. Tolerable -->
@@ -246,7 +246,7 @@
 						<!-- help is not display as shown below in the app. Tolerable -->
 						<help>Provide a URL to the licence, so people can see it on your Open Data Certificate and check that it's publicly available.</help>
 					</question>
-					<question id="otherContentLicenceOpen">
+					<question id="otherContentLicenceOpenPoke">
 						<label>Is the licence an open licence?</label>
 						<yesno required="required"/>
 						<help more="https://opendefinition.org/">If you aren't sure what an open licence is then read the <a href="https://opendefinition.org/">Open Definition</a> by Open Knowledge International. Next, choose your licence from the <a href="https://licenses.opendefinition.org/">Open Definition Advisory Board open licence list</a>. If a licence isn't in their list, it's either not open or hasn't been assessed yet.</help>
@@ -304,7 +304,7 @@
 			<label>Privacy</label>
 			<help>how you protect people's privacy</help>
 	<!-- Q1 Is this data is about people or their activities? -->
-			<question id="dataPersonal" display="This data contains">
+			<question id="dataPersonalPoke" display="This data contains">
 				<!-- label is not displayed as shown below in the app. Prefer it was as it was a suggestion by OIC - TODO -->
 				<label>Is this data is about people or their activities?</label>
 				<radioset required="pilot">
@@ -322,8 +322,8 @@
 				</radioset>
 			</question>
 	<!-- Q2 If the data is about individuals, has it been de-identified? -->
-			<if test="this.dataPersonal() === 'individual'">
-				<question id="dataSummarised" display="This data has">
+			<if test="this.dataPersonalPoke() === 'individual'">
+				<question id="dataSummarisedPoke" display="This data has">
 					<label>Has the data is about individuals been de-identified?</label>
 					<radioset required="pilot">
 						<option value="yes" display="been de-identified">
@@ -337,8 +337,8 @@
 					</radioset>
 				</question>
 	<!-- Q3 If the data about individuals has not been de-identified, can you legally publish it?  -->
-				<if test="this.dataSummarised() === 'no'">
-					<question id="lawfulDisclosure" display="By law, this data about individuals">
+				<if test="this.dataSummarisedPoke() === 'no'">
+					<question id="lawfulDisclosurePoke" display="By law, this data about individuals">
 						<!-- label is not displayed as shown below in the app. Must be OIC requirement - TODO -->
 						<label>Do you have permission to publish this personal data online? </label>
 						<yesno yes="can be published"/>
@@ -348,8 +348,8 @@
 						<requirement level="pilot">You should <strong>only publish personal data without de-identification if you are required or permitted to do so by law</strong>.</requirement>
 					</question>
 	<!-- Q4 If the data can you legally published, where is the law published?  -->
-					<if test="this.lawfulDisclosure() === 'true'">
-						<question id="lawfulDisclosureURL" display="The right to publish this data about individuals is documented at">
+					<if test="this.lawfulDisclosurePoke() === 'true'">
+						<question id="lawfulDisclosureURLPoke" display="The right to publish this data about individuals is documented at">
 							<label>Where do you document your right to publish data about individuals? </label>
 							<input type="url" placeholder="Disclosure Rationale URL"/>
 							<help>Provide a URL to the law or individual permission that allows you to publish this data about individuals.</help>
@@ -358,8 +358,8 @@
 					</if>
 				</if>
 	<!-- Q5 if the data about individuals has been de-identified, has the process been audited?  -->
-				<if test="this.dataSummarised() === 'yes'">
-					<question id="statisticalAnonAudited" display="The de-identification process has">
+				<if test="this.dataSummarisedPoke() === 'yes'">
+					<question id="statisticalAnonAuditedPoke" display="The de-identification process has">
 						<!-- label is not displayed as shown below in the app. Must say "de-identification" not "anonymisation" - TODO -->
 						<label>Has your de-identification process been independently audited? </label>
 						<yesno yes="been independently audited" no="not been independently audited"/>
@@ -367,7 +367,7 @@
 						<requirement level="standard">You should <strong>have your de-identification process audited independently</strong> to ensure it reduces the risk of individuals being reidentified.</requirement>
 					</question>
 	<!-- Q6 if the data about individuals has been de-identified, has the publishing risks been assessed?  -->
-					<question id="privacyImpactAssessmentExists" display="The curator has">
+					<question id="privacyImpactAssessmentExistsPoke" display="The curator has">
 						<!-- label is not displayed as shown below in the app. Should not say "privacy impact assessment" - TODO -->
 						<label>Have you assessed the privacy risks of publishing this data? </label>
 						<yesno yes="assessed the privacy risks of publishing this data" no="not assessed the privacy risks of publishing this data"/>
@@ -377,8 +377,8 @@
 						<requirement level="pilot">You should <strong>assess the privacy risks</strong> if you publish data about individuals.</requirement>
 					</question>
 	<!-- Q7 if the publishing risks have been assessed, is the risk assessment published?  -->
-					<if test="this.privacyImpactAssessmentExists() === 'true'">
-						<question id="privacyImpactAssessmentUrl" display="The privacy risk assessment is published at">
+					<if test="this.privacyImpactAssessmentExistsPoke() === 'true'">
+						<question id="privacyImpactAssessmentUrlPoke" display="The privacy risk assessment is published at">
 							<!-- label is not displayed as shown below in the app. Should not say "privacy impact assessment" - TODO -->
 							<label>Where is your privacy risk assessment published? </label>
 							<input type="url" placeholder="Privacy risk assessment URL"/>
@@ -387,7 +387,7 @@
 							<requirement level="standard">You should <strong>publish your privacy risk assessment</strong> so people can understand how you have assessed the risks of disclosing data.</requirement>
 						</question>
 	<!-- Q8 if the publishing risks have been assessed, has it been independently audited? -->
-						<question id="piaAudited" display="The privacy risk assessment has been">
+						<question id="piaAuditedPoke" display="The privacy risk assessment has been">
 							<!-- label is not displayed as shown below in the app. Should not say "privacy impact assessment" - TODO -->
 							<label>Has your privacy risk assessment been independently audited? </label>
 							<yesno yes="independently audited" no="not been independently audited"/>
