@@ -3,13 +3,13 @@ en:
   surveyor:
     title: US
     full_title: United States
-    description: <p>This self-assessment questionnaire generates an open data certificate
+    description: "<p>This self-assessment questionnaire generates an open data certificate
       and badge you can publish to tell people all about this open data. We also use
       your answers to learn how organisations publish open data.</p><p>When you answer
       these questions it demonstrates your efforts to comply with relevant legislation.
       You should also check which other laws and policies apply to your sector.</p><p><strong>You
       do not need to answer all the questions to get a certificate.</strong> Just
-      answer those you can.</p>
+      answer those you can.</p>"
     survey_sections:
       legal:
         text: Legal Information
@@ -108,20 +108,22 @@ en:
             text: 'no'
           a_true:
             text: 'yes'
-      claUrl:
-        text: Where is the Contributor Licence Agreement (CLA)?
-        text_as_statement: The Contributor Licence Agreement is at
-        help_text: Give a link to an agreement that shows contributors allow you to
-          reuse their data. A CLA will either transfer contributor's rights to you,
-          waive their rights, or license the data to you so you can publish it.
+      claUrlPoke:
+        text: Where is the contributor licence or waiver?
+        text_as_statement: The contributor licence or waiver is at
+        help_text: Give a link to a licence or waiver that shows contributors allow
+          you to reuse their data. A agreement will either transfer contributor's
+          rights to you, waive their rights, or license the data to you so you can
+          publish it.
         answers:
           a_1:
             placeholder: Contributor Licence Agreement URL
-      cldsRecorded:
-        text: Have all contributors agreed to the Contributor Licence Agreement (CLA)?
-        help_text: Check all contributors agree to a CLA before you reuse or republish
-          their contributions. You should keep a record of who gave contributions
-          and whether or not they agree to the CLA.
+      cldsRecordedPoke:
+        text: Have all contributors agreed to the contributor licence or waiver?
+        help_text: Check all contributors agree to a contributor licence or waiver
+          before you reuse or republish their contributions. You should keep a record
+          of who gave contributions and whether or not they agree to the contributor
+          licence or waiver.
         answers:
           a_false:
             text: 'no'
@@ -161,6 +163,322 @@ en:
         answers:
           a_1:
             placeholder: Rights Statement URL
+      contentRights:
+        text: Is there any copyright in the content of this data?
+        text_as_statement: There are
+        answers:
+          norights:
+            text: no, the data only contains facts and numbers
+            help_text: There is no copyright in factual information. If the data does
+              not contain any content that was created through intellectual effort,
+              there are no rights in the content.
+            text_as_statement: no rights in the content of the data
+          samerights:
+            text: yes, and the rights are all held by the same person or organisation
+            help_text: Choose this option if the content in the data was all created
+              by or transferred to the same person or organisation.
+            text_as_statement: ''
+          mixedrights:
+            text: yes, and the rights are held by different people or organisations
+            help_text: In some data, the rights in different records are held by different
+              people or organisations. Information about rights needs to be kept in
+              the data too.
+            text_as_statement: ''
+      explicitWaiverPoke:
+        text: Is the content of the data marked as public domain?
+        text_as_statement: The content has been
+        help_text: Works in the public domain are those whose intellectual property
+          rights have expired, have been forfeited, or are inapplicable. If none of
+          the content of your data have copyright or other rights over it, it is good
+          practice to explicitly state this by labelling it as ‘public domain’. You
+          can do this by using the <a href="https://creativecommons.org/publicdomain/">Creative
+          Commons Public Domain Mark</a>.
+        answers:
+          a_false:
+            text: 'no'
+            text_as_statement: ''
+          a_true:
+            text: 'yes'
+            text_as_statement: marked as public domain
+      contentLicence:
+        text: Under which licence can others reuse content?
+        text_as_statement: The content is available under
+        help_text: Remember that whoever spends intellectual effort creating content
+          automatically gets rights over it but creative content does not include
+          facts. So people need a waiver or a licence which proves that they can use
+          the content and explains how they can do that legally. We list the most
+          common licenses here; if there is no copyright in the content, it's expired,
+          or you've waived them, choose 'Not applicable'.
+        answers:
+          cc_by:
+            text: Creative Commons Attribution
+            text_as_statement: Creative Commons Attribution
+          cc_by_sa:
+            text: Creative Commons Attribution Share-Alike
+            text_as_statement: Creative Commons Attribution Share-Alike
+          cc_zero:
+            text: Creative Commons CCZero
+            text_as_statement: Creative Commons CCZero
+          na:
+            text: Not applicable
+            text_as_statement: ''
+          other:
+            text: Other...
+            text_as_statement: ''
+          ogl_uk:
+            text: UK Open Government Licence
+            text_as_statement: UK Open Government Licence
+          iodl:
+            text: Italian Open Data License v1.0
+            text_as_statement: Italian Open Data License v1.0
+          iodl_2_0:
+            text: Italian Open Data License v2.0
+            text_as_statement: Italian Open Data License v2.0
+          us_pd:
+            text: US Government Work (Public Domain)
+            text_as_statement: US Government Work (Public Domain)
+      contentNotApplicable:
+        text: Why doesn't a licence apply to the content of the data?
+        text_as_statement: The content in this data is not licensed because
+        answers:
+          norights:
+            text: there is no copyright in the content of this data
+            help_text: Copyright only applies to content if you spent intellectual
+              effort creating it, for example, by writing text that's within the data.
+              There's no copyright if the content only contains facts.
+            text_as_statement: there is no copyright
+          expired:
+            text: copyright has expired
+            help_text: Copyright lasts for a fixed amount of time, based on either
+              the number of years after the death of its creator or its publication.
+              You should check when the content was created or published because if
+              that was a long time ago, copyright might have expired.
+            text_as_statement: copyright has expired
+          waived:
+            text: copyright has been waived
+            help_text: This means no one owns copyright and anyone can do whatever
+              they want with this data.
+            text_as_statement: ''
+      contentWaiver:
+        text: Which waiver do you use to waive copyright?
+        text_as_statement: Copyright has been waived with
+        help_text: You need a statement to show people you've done this, so they understand
+          that they can do whatever they like with this data. Standard waivers already
+          exist like CCZero but you can write your own with legal advice.
+        answers:
+          cc0:
+            text: Creative Commons CCZero
+            text_as_statement: Creative Commons CCZero
+          other:
+            text: Other...
+            text_as_statement: Other...
+      contentOtherWaiver:
+        text: Where is the waiver for the copyright?
+        text_as_statement: Copyright has been waived with
+        help_text: Give a URL to your own publicly available waiver so people can
+          check that it does waive your copyright.
+        answers:
+          a_1:
+            placeholder: Waiver URL
+      otherContentLicenceName:
+        text: What's the name of the licence?
+        text_as_statement: The content is available under
+        help_text: If you use a different licence, we need its name so people can
+          see it on your Open Data Certificate.
+        answers:
+          a_1:
+            placeholder: Licence Name
+      otherContentLicenceURL:
+        text: Where is the licence?
+        text_as_statement: The content licence is at
+        help_text: Give a URL to the licence, so people can see it on your Open Data
+          Certificate and check that it's publicly available.
+        answers:
+          a_1:
+            placeholder: Licence URL
+      otherContentLicenceOpenPoke:
+        text: Is the licence an open licence?
+        help_text: If you aren't sure what an open licence is then read the <a href="https://opendefinition.org/">Open
+          Definition</a> by Open Knowledge International. Next, choose your licence
+          from the <a href="https://licenses.opendefinition.org/">Open Definition
+          Advisory Board open licence list</a>. If a licence isn't in their list,
+          it's either not open or hasn't been assessed yet.
+        answers:
+          a_false:
+            text: 'no'
+          a_true:
+            text: 'yes'
+      contentRightsURL:
+        text: Where are the rights and licensing of the content explained?
+        text_as_statement: The rights and licensing of the content are explained at
+        help_text: Give the URL for a page where you describe how someone can find
+          out the rights and licensing of a piece of content from the data.
+        answers:
+          a_1:
+            placeholder: Content Rights Description URL
+      copyrightStatementMetadata:
+        text: Does your rights statement include machine-readable versions of
+        text_as_statement: The rights statement includes data about
+        help_text: It's good practice to embed information about rights in machine-readable
+          formats so people can automatically attribute this data back to you when
+          they use it.
+        answers:
+          dataLicense:
+            text: data licence
+            text_as_statement: its data licence
+          contentLicense:
+            text: content licence
+            text_as_statement: its content licence
+          attribution:
+            text: attribution text
+            text_as_statement: what attribution text to use
+          attributionURL:
+            text: attribution URL
+            text_as_statement: what attribution link to give
+          copyrightNotice:
+            text: copyright notice or statement
+            text_as_statement: a copyright notice or statement
+          copyrightYear:
+            text: copyright year
+            text_as_statement: the copyright year
+          copyrightHolder:
+            text: copyright holder
+            text_as_statement: the copyright holder
+          databaseRightYear:
+            text: database right year
+            text_as_statement: the database right year
+          databaseRightHolder:
+            text: database right holder
+            text_as_statement: the database right holder
+      dataPersonalPoke:
+        text: Is this data is about people or their activities?
+        text_as_statement: This data contains
+        answers:
+          not_personal:
+            text: no, the data is not about people or their activities
+            help_text: Remember that individuals can still be identified even if data
+              isn't directly about them.
+            text_as_statement: no data about individuals
+          individual:
+            text: yes, there is a risk that individuals can be identified, for example
+              by combining the data with other third party data
+            help_text: Remember that individuals can still be identified even if data
+              isn't directly about them. Some data about individuals may be able to
+              be published online with permission or by law.
+            text_as_statement: information that could identify individuals
+      dataSummarisedPoke:
+        text: Has the data is about individuals been de-identified?
+        text_as_statement: This data has
+        answers:
+          'yes':
+            text: yes, the data been de-identified
+            help_text: Data may be de-identified by deleting or masking personal identifiers,
+              aggregating data or other techniques.
+            text_as_statement: been de-identified
+          'no':
+            text: no, there is a risk that individuals can be identified, for example
+              by third parties with access to extra information
+            help_text: The law may permit some data about individuals to be published
+              online.
+            text_as_statement: not been de-identified
+      lawfulDisclosurePoke:
+        text: 'Do you have permission to publish this personal data online? '
+        text_as_statement: By law, this data about individuals
+        help_text: You may be able to publish data about individuals online if either,
+          the data is required or permitted to be published by law, or you have permission
+          from the affected individuals.
+        answers:
+          a_false:
+            text: 'no'
+            text_as_statement: ''
+          a_true:
+            text: 'yes'
+            text_as_statement: can be published
+      lawfulDisclosureURLPoke:
+        text: 'Where do you document your right to publish data about individuals? '
+        text_as_statement: The right to publish this data about individuals is documented
+          at
+        help_text: Provide a URL to the law or individual permission that allows you
+          to publish this data about individuals.
+        answers:
+          a_1:
+            placeholder: Disclosure Rationale URL
+      statisticalAnonAuditedPoke:
+        text: 'Has your de-identification process been independently audited? '
+        text_as_statement: The de-identification process has
+        help_text: It's good practice to check your de-identification was done correctly.
+          Independent audits by specialists or third-parties tend to be more rigorous
+          and impartial.
+        answers:
+          a_false:
+            text: 'no'
+            text_as_statement: not been independently audited
+          a_true:
+            text: 'yes'
+            text_as_statement: been independently audited
+      privacyImpactAssessmentExistsPoke:
+        text: 'Have you assessed the privacy risks of publishing this data? '
+        text_as_statement: The curator has
+        help_text: You should assess the likelihood of personal data being disclosed
+          and the consequences to individuals of the disclosure.
+        answers:
+          a_false:
+            text: 'no'
+            text_as_statement: not assessed the privacy risks of publishing this data
+          a_true:
+            text: 'yes'
+            text_as_statement: assessed the privacy risks of publishing this data
+      privacyImpactAssessmentUrlPoke:
+        text: 'Where is your privacy risk assessment published? '
+        text_as_statement: The privacy risk assessment is published at
+        help_text: Provide a URL to where people can check how you have assessed the
+          privacy risks to individuals. This may be redacted or summarised if it contains
+          sensitive information.
+        answers:
+          a_1:
+            placeholder: Privacy risk assessment URL
+      piaAuditedPoke:
+        text: 'Has your privacy risk assessment been independently audited? '
+        text_as_statement: The privacy risk assessment has been
+        help_text: It's good practice to check your privacy risk assessment was done
+          correctly. Independent audits by specialists or third-parties tend to be
+          more rigorous and impartial.
+        answers:
+          a_false:
+            text: 'no'
+            text_as_statement: not been independently audited
+          a_true:
+            text: 'yes'
+            text_as_statement: independently audited
+      dataBreach:
+        text: Are you prepared to respond if publishing this data compromises the
+          privacy of individuals?
+        help_text: It's good practice to be prepared to respond to a potential data
+          breach.
+        answers:
+          a_false:
+            text: 'no'
+          a_true:
+            text: 'yes'
+      claUrl:
+        text: Where is the Contributor Licence Agreement (CLA)?
+        text_as_statement: The Contributor Licence Agreement is at
+        help_text: Give a link to an agreement that shows contributors allow you to
+          reuse their data. A CLA will either transfer contributor's rights to you,
+          waive their rights, or license the data to you so you can publish it.
+        answers:
+          a_1:
+            placeholder: Contributor Licence Agreement URL
+      cldsRecorded:
+        text: Have all contributors agreed to the Contributor Licence Agreement (CLA)?
+        help_text: Check all contributors agree to a CLA before you reuse or republish
+          their contributions. You should keep a record of who gave contributions
+          and whether or not they agree to the CLA.
+        answers:
+          a_false:
+            text: 'no'
+          a_true:
+            text: 'yes'
       databaseRights:
         text: Do database rights apply to your dataset?
         text_as_statement: Database rights to the dataset
@@ -220,13 +538,13 @@ en:
         text_as_statement: Database rights do not apply because
         answers:
           trivial:
-            text: ' Non-trivial effort wasn’t needed to create the dataset.'
+            text: " Non-trivial effort wasn’t needed to create the dataset."
             text_as_statement: creating the dataset was trivial
           expired:
-            text: ' The database rights expired.'
+            text: " The database rights expired."
             text_as_statement: the rights expired
           waived:
-            text: ' The rights were waived by their holders.'
+            text: " The rights were waived by their holders."
             text_as_statement: the rights were waived
       databaseRightsWaiveType:
         text: How were the database rights waived?
@@ -267,13 +585,13 @@ en:
         text_as_statement: The dataset itself is not copyrighted because
         answers:
           expired:
-            text: ' The copyright has expired.'
+            text: " The copyright has expired."
             text_as_statement: the copyright has expired
           freeWork:
-            text: ' The dataset is public domain.'
+            text: " The dataset is public domain."
             text_as_statement: the dataset is public domain
           stateWork:
-            text: ' The dataset is a government work.'
+            text: " The dataset is a government work."
             text_as_statement: the dataset is a government work
       databaseCopyrightLicenseType:
         text: How is the copyright to the dataset itself licensed?
@@ -323,16 +641,16 @@ en:
         text_as_statement: The dataset contents are not copyrighted because
         answers:
           notApplicable:
-            text: ' Copyright does not apply to this kind of content.'
+            text: " Copyright does not apply to this kind of content."
             text_as_statement: copyright does not apply to this kind of content
           expired:
-            text: ' The copyright has expired.'
+            text: " The copyright has expired."
             text_as_statement: the copyright has expired
           freeWork:
-            text: ' The dataset contents are public domain.'
+            text: " The dataset contents are public domain."
             text_as_statement: the contents are public domain
           stateWork:
-            text: ' The dataset contents are a government work.'
+            text: " The dataset contents are a government work."
             text_as_statement: the contents are a government work
       databaseContentCopyrightLicenseType:
         text: How is the copyright to the dataset contents licensed?
@@ -363,40 +681,6 @@ en:
         answers:
           a_1:
             placeholder: license URL
-      copyrightStatementMetadata:
-        text: Does your rights statement include machine-readable versions of
-        text_as_statement: The rights statement includes data about
-        help_text: It's good practice to embed information about rights in machine-readable
-          formats so people can automatically attribute this data back to you when
-          they use it.
-        answers:
-          dataLicense:
-            text: data licence
-            text_as_statement: its data licence
-          contentLicense:
-            text: content licence
-            text_as_statement: its content licence
-          attribution:
-            text: attribution text
-            text_as_statement: what attribution text to use
-          attributionURL:
-            text: attribution URL
-            text_as_statement: what attribution link to give
-          copyrightNotice:
-            text: copyright notice or statement
-            text_as_statement: a copyright notice or statement
-          copyrightYear:
-            text: copyright year
-            text_as_statement: the copyright year
-          copyrightHolder:
-            text: copyright holder
-            text_as_statement: the copyright holder
-          databaseRightYear:
-            text: database right year
-            text_as_statement: the database right year
-          databaseRightHolder:
-            text: database right holder
-            text_as_statement: the database right holder
       dataPersonal:
         text: Can individuals be identified from this data?
         text_as_statement: This data contains
@@ -664,27 +948,6 @@ en:
             text: 'no'
           a_true:
             text: 'yes'
-      contentRights:
-        text: Is there any copyright in the content of this data?
-        text_as_statement: There are
-        answers:
-          norights:
-            text: no, the data only contains facts and numbers
-            help_text: There is no copyright in factual information. If the data does
-              not contain any content that was created through intellectual effort,
-              there are no rights in the content.
-            text_as_statement: no rights in the content of the data
-          samerights:
-            text: yes, and the rights are all held by the same person or organisation
-            help_text: Choose this option if the content in the data was all created
-              by or transferred to the same person or organisation.
-            text_as_statement: ''
-          mixedrights:
-            text: yes, and the rights are held by different people or organisations
-            help_text: In some data, the rights in different records are held by different
-              people or organisations. Information about rights needs to be kept in
-              the data too.
-            text_as_statement: ''
       explicitWaiver:
         text: Is the content of the data marked as public domain?
         text_as_statement: The content has been
@@ -698,102 +961,6 @@ en:
           a_true:
             text: 'yes'
             text_as_statement: marked as public domain
-      contentLicence:
-        text: Under which licence can others reuse content?
-        text_as_statement: The content is available under
-        help_text: Remember that whoever spends intellectual effort creating content
-          automatically gets rights over it but creative content does not include
-          facts. So people need a waiver or a licence which proves that they can use
-          the content and explains how they can do that legally. We list the most
-          common licenses here; if there is no copyright in the content, it's expired,
-          or you've waived them, choose 'Not applicable'.
-        answers:
-          cc_by:
-            text: Creative Commons Attribution
-            text_as_statement: Creative Commons Attribution
-          cc_by_sa:
-            text: Creative Commons Attribution Share-Alike
-            text_as_statement: Creative Commons Attribution Share-Alike
-          cc_zero:
-            text: Creative Commons CCZero
-            text_as_statement: Creative Commons CCZero
-          na:
-            text: Not applicable
-            text_as_statement: ''
-          other:
-            text: Other...
-            text_as_statement: ''
-          ogl_uk:
-            text: UK Open Government Licence
-            text_as_statement: UK Open Government Licence
-          iodl:
-            text: Italian Open Data License v1.0
-            text_as_statement: Italian Open Data License v1.0
-          iodl_2_0:
-            text: Italian Open Data License v2.0
-            text_as_statement: Italian Open Data License v2.0
-          us_pd:
-            text: US Government Work (Public Domain)
-            text_as_statement: US Government Work (Public Domain)
-      contentNotApplicable:
-        text: Why doesn't a licence apply to the content of the data?
-        text_as_statement: The content in this data is not licensed because
-        answers:
-          norights:
-            text: there is no copyright in the content of this data
-            help_text: Copyright only applies to content if you spent intellectual
-              effort creating it, for example, by writing text that's within the data.
-              There's no copyright if the content only contains facts.
-            text_as_statement: there is no copyright
-          expired:
-            text: copyright has expired
-            help_text: Copyright lasts for a fixed amount of time, based on either
-              the number of years after the death of its creator or its publication.
-              You should check when the content was created or published because if
-              that was a long time ago, copyright might have expired.
-            text_as_statement: copyright has expired
-          waived:
-            text: copyright has been waived
-            help_text: This means no one owns copyright and anyone can do whatever
-              they want with this data.
-            text_as_statement: ''
-      contentWaiver:
-        text: Which waiver do you use to waive copyright?
-        text_as_statement: Copyright has been waived with
-        help_text: You need a statement to show people you've done this, so they understand
-          that they can do whatever they like with this data. Standard waivers already
-          exist like CCZero but you can write your own with legal advice.
-        answers:
-          cc0:
-            text: Creative Commons CCZero
-            text_as_statement: Creative Commons CCZero
-          other:
-            text: Other...
-            text_as_statement: Other...
-      contentOtherWaiver:
-        text: Where is the waiver for the copyright?
-        text_as_statement: Copyright has been waived with
-        help_text: Give a URL to your own publicly available waiver so people can
-          check that it does waive your copyright.
-        answers:
-          a_1:
-            placeholder: Waiver URL
-      otherContentLicenceName:
-        text: What's the name of the licence?
-        text_as_statement: The content is available under
-        help_text: If you use a different licence, we need its name so people can
-          see it on your Open Data Certificate.
-        answers:
-          a_1:
-            placeholder: Licence Name
-      otherContentLicenceURL:
-        text: Where is the licence?
-        text_as_statement: The content licence is at
-        help_text: Give a URL to the licence, so people can see it on your Open Data
-          Certificate and check that it's publicly available.
-        answers:
-          a_1:
-            placeholder: Licence URL
       otherContentLicenceOpen:
         text: Is the licence an open licence?
         help_text: If you aren't sure what an open licence is then read the <a href="http://opendefinition.org/">Open
@@ -806,14 +973,6 @@ en:
             text: 'no'
           a_true:
             text: 'yes'
-      contentRightsURL:
-        text: Where are the rights and licensing of the content explained?
-        text_as_statement: The rights and licensing of the content are explained at
-        help_text: Give the URL for a page where you describe how someone can find
-          out the rights and licensing of a piece of content from the data.
-        answers:
-          a_1:
-            placeholder: Content Rights Description URL
       riskAssessmentExists:
         text: Have you assessed the risks of disclosing personal data?
         text_as_statement: The curator has
@@ -953,6 +1112,9 @@ en:
       standard_3:
         text: You should <strong>mark public domain content as public domain</strong>
           so that people know they can reuse it.
+      basic_6:
+        text: You must <strong>publish open data under an open licence</strong> so
+          that people can use it.
       standard_4:
         text: You should provide <strong>machine-readable data in your rights statement
           about the licence</strong> for this data, so automatic tools can use it.
@@ -963,6 +1125,10 @@ en:
       standard_6:
         text: You should provide <strong>machine-readable data in your rights statement
           about the text to use when citing the data</strong>, so automatic tools
+          can use it.
+      standard_7:
+        text: You should provide <strong>machine-readable data in your rights statement
+          about the URL to link to when citing this data</strong>, so automatic tools
           can use it.
       exemplar_1:
         text: You should provide <strong>machine-readable data in your rights statement
@@ -976,6 +1142,27 @@ en:
         text: You should provide <strong>machine-readable data in your rights statement
           about the copyright holder for the data</strong>, so automatic tools can
           use it.
+      pilot_4:
+        text: You should <strong>only publish personal data without anonymisation
+          if you are required or permitted to do so by law</strong>.
+      standard_8:
+        text: You should <strong>have your anonymisation process audited independently</strong>
+          to ensure it reduces the risk of individuals being reidentified.
+      standard_9:
+        text: You should <strong>document your right to publish data about individuals</strong>
+          for people who use your data and for those affected by disclosure.
+      pilot_5:
+        text: You should <strong>assess the risks of disclosing personal data</strong>
+          if you publish data about individuals.
+      standard_10:
+        text: You should <strong>publish your privacy risk assessment</strong> so
+          people can understand how you have assessed the risks of disclosing data.
+      standard_11:
+        text: You should <strong>have your risk assessment audited independently</strong>
+          to ensure it has been carried out correctly.
+      standard_12:
+        text: You should <strong>have your anonymisation process audited independently</strong>
+          by an expert to ensure it is appropriate for your data.
       exemplar_4:
         text: You should provide <strong>machine-readable data in your rights statement
           about the database right year for the data</strong>, so automatic tools
@@ -984,25 +1171,6 @@ en:
         text: You should provide <strong>machine-readable data in your rights statement
           about the database right holder for the data</strong>, so automatic tools
           can use it.
-      standard_7:
-        text: You should provide <strong>machine-readable data in your rights statement
-          about the URL to link to when citing this data</strong>, so automatic tools
-          can use it.
-      pilot_4:
-        text: You should <strong>only publish personal data without anonymisation
-          if you are required or permitted to do so by law</strong>.
-      standard_8:
-        text: You should <strong>have your anonymisation process audited independently</strong>
-          to ensure it reduces the risk of individuals being reidentified.
-      pilot_5:
-        text: You should <strong>assess the risks of disclosing personal data</strong>
-          if you publish data about individuals.
-      standard_9:
-        text: You should <strong>document your right to publish data about individuals</strong>
-          for people who use your data and for those affected by disclosure.
-      standard_10:
-        text: You should <strong>publish your privacy risk assessment</strong> so
-          people can understand how you have assessed the risks of disclosing data.
       pilot_6:
         text: You should <strong>tell people what purposes the individuals in your
           data consented to you using their data for</strong>. So that they use your
@@ -1010,15 +1178,6 @@ en:
       pilot_7:
         text: You should <strong>involve the person responsible for data protection</strong>
           in your organisation before you publish this data.
-      standard_11:
-        text: You should <strong>have your risk assessment audited independently</strong>
-          to ensure it has been carried out correctly.
-      basic_6:
-        text: You must <strong>publish open data under an open licence</strong> so
-          that people can use it.
       basic_7:
         text: You must <strong>publish open data under an open licence</strong> so
           that people can use it.
-      standard_12:
-        text: You should <strong>have your anonymisation process audited independently</strong>
-          by an expert to ensure it is appropriate for your data.
